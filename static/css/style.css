@@ -802,7 +802,7 @@
  #sidebar.active {
      left: 0;
 }
- #dismiss {
+ /* #dismiss {
      width: 35px;
      height: 35px;
      line-height: 34px;
@@ -819,7 +819,7 @@
  #dismiss:hover {
      background: #111;
      color: #fff;
-}
+} */
  .overlay {
      display: none;
      position: fixed;

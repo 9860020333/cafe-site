@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Blog
+from .models import Blog, menu
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
@@ -25,3 +25,17 @@ def blog_detail(request,slug):
 
 def about_view(request):
     return render(request,'Home/about.html',{})
+
+def menu_view(request):
+    menu_list = menu.objects.all().order_by('-id')
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(menu_list, 8)
+    try:
+        menus = paginator.page(page)
+    except PageNotAnInteger:
+        menus = paginator.page(1)
+    except EmptyPage:
+        menus = paginator.page(paginator.num_pages)
+
+    return render(request,'Home/menu.html',{'menus':menus})

@@ -36,7 +36,7 @@
         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
     </div>
 
-    <div class="wrapper">
+    <div id="dismiss" class="wrapper">
     <!-- end loader -->
      <div class="sidebar">
             <!-- Sidebar  -->
@@ -56,6 +56,9 @@
                     </li>
                     <li>
                         <a href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'menu' %}">Menu</a>
                     </li>
                     <li class="active">
                         <a href="{% url 'blog' %}">Blog</a>
@@ -137,6 +140,7 @@
                             <li class="active"> <a href="{% url 'home' %}">Home</a></li>
                             <li> <a href="{% url 'about' %}">About</a></li>
                             <li> <a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li> <a href="{% url 'menu' %}">Menu</a></li>
                             <li> <a href="{% url 'blog' %}">Blog</a></li>
                             <li> <a href="#">Reservations</a></li>
                             <li> <a href="http://www.stage27.co/s/order">Order Now</a></li>

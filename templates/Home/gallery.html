@@ -33,13 +33,13 @@
 <body class="main-layout Recipes_page">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+        <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
     </div>
 
     <div class="wrapper">
     <!-- end loader -->
 
-    <div class="sidebar">
+    <div id="dismiss" class="sidebar">
         <!-- Sidebar  -->
         <nav id="sidebar">
 
@@ -57,6 +57,9 @@
                 </li>
                 <li class="active">
                     <a href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li>
+                    <a href="{% url 'menu' %}">Menu</a>
                 </li>
                 <li>
                     <a href="{% url 'blog' %}">Blog</a>
@@ -156,6 +159,7 @@
                             <li class="active"> <a href="index.html">Home</a></li>
                             <li> <a href="{% url 'about' %}">About</a></li>
                             <li> <a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li> <a href="{% url 'menu' %}">Menu</a></li>
                             <li> <a href="{% url 'blog' %}">Blog</a></li>
                             <li> <a href="#">Reservations</a></li>
                             <li> <a href="http://www.stage27.co/s/order">Order Now</a></li>
