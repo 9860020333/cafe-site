@@ -114,22 +114,25 @@
                     <div class="full">
                         <div id="main_slider" class="carousel vert slide" data-ride="carousel" data-interval="3000">
                             <div class="carousel-inner">
+                                <!-- one -->
                                 <div class="carousel-item active">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="slider_cont">
-                                                <h3>Discover Restaurants<br>That deliver near You</h3>
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                                <h3>Discover<br>The craziest burgers near you!!!</h3>
+                                                <p>We offer you our best and tastiest burgers and fries that will make your day much much better</p>
                                                 <a class="main_bt_border" href="http://www.stage27.co/s/order">Order Now</a>
                                             </div>
                                         </div>
                                         <div class="col-md-7">
                                             <div class="slider_image full text_align_center">
-                                                <img class="img-responsive" src="{% static 'images/burger_slide.png' %}" alt="#" />
+                                                <img class="img-responsive" src="/media/home_image/{{active_home.image}}" alt="#" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                {% for images in home_image %}
                                 <div class="carousel-item">
                                     <div class="row">
                                         <div class="col-md-5">
@@ -141,11 +144,12 @@
                                         </div>
                                         <div class="col-md-7 full text_align_center">
                                             <div class="slider_image">
-                                                <img class="img-responsive" src="{% static 'images/burger_slide.png' %}" alt="#" />
+                                                <img class="img-responsive" src="/media/home_image/{{images.image}}" alt="#" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {% endfor %}
                             </div>
                             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                                 <i class="fa fa-angle-up"></i>

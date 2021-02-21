@@ -4,7 +4,7 @@ from Home.views import blog_view, blog_detail,about_view,menu_view
 from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import TemplateView
-from Home.models import Blog, menu
+from Home.models import Blog, menu , home_image
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,6 +16,8 @@ urlpatterns = [
         "instagram_profile_name": "foods.nepal",
          "blog": Blog.objects.all().order_by('-id')[0:3],
          "menu": menu.objects.all().order_by('-id')[0:4],
+         "active_home": home_image.objects.all()[0],
+         "home_image": home_image.objects.all()[1:],
     }),name='home'),
 
     path('gallery/', TemplateView.as_view(template_name='Home/gallery.html', extra_context={

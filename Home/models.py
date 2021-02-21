@@ -29,3 +29,6 @@ class menu(models.Model):
 
     def __str__(self):
         return self.title
+    
+class home_image(models.Model):
+    image = models.ImageField(upload_to='home_image')
