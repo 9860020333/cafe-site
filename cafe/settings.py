@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Home',
     'ckeditor',
-    'django_instagram',
+    'sorl.thumbnail',
+    'django_easy_instagram',
 
 ]
 

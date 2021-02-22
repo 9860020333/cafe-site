@@ -29,50 +29,49 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
-
-<body class="main-layout blog_page">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
-    </div>
-
-    <div id="dismiss" class="wrapper">
-    <!-- end loader -->
-     <div class="sidebar">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-
-                <div id="dismiss">
-                    <i class="fa fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li >
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">About</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'gallery' %}">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'menu' %}">Menu</a>
-                    </li>
-                    <li class="active">
-                        <a href="{% url 'blog' %}">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#">Reservations</a>
-                    </li>
-                    <li>
-                        <a href="http://www.stage27.co/s/order">Order Now</a>
-                    </li>
-                </ul>
-
-            </nav>
+    <body  class="main-layout">
+        <!-- loader  -->
+        <div class="loader_bg">
+            <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
         </div>
+    
+        <div class="wrapper">
+        <!-- end loader -->
+    
+         <div id="dismiss" class="sidebar">
+                <!-- Sidebar  -->
+                <nav id="sidebar">
+    
+                    <div id="dismiss">
+                        <i class="fa fa-arrow-left"></i>
+                    </div>
+    
+                    <ul class="list-unstyled components">
+    
+                        <li class="active">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}">About</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'gallery' %}">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'menu' %}">Menu</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        <li>
+                            <a href=#>Reservations</a>
+                        </li>
+                        <li>
+                            <a href="http://www.stage27.co/s/order">Order Now</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
     <div id="content">
     <!-- header -->
@@ -116,7 +115,8 @@
           </div>
 </div>
 
-<center style="padding-top: 20px;">
+<!-- blog  -->
+<!-- <center style="padding-top: 20px;">
 <div class="card" style="width: 900px;">
     <img class="card-img-top" src="/media/{{blog.image}}" alt="Card image cap" style="width:900px;height:600px;">
     <div class="card-body">
@@ -126,7 +126,22 @@
       <p class="card-text">{{blog.body|safe}}</p>
     </div>
   </div>
-</center>
+</center> -->
+<br>
+<div class="container">
+    <div class="well"> 
+        <div class="row">
+             <div class="col-md-12">                     
+                 <div class="pull-left col-md-6 col-xs-12 thumb-contenido"><img class="center-block img-responsive" src="/media/{{blog.image}}" /></div>
+                 <div class="">
+                     <small>{{blog.date}}</small><br>
+                     <small><strong>Stage27</strong></small>
+                     <hr>
+                     <p class="text-justify">{{blog.body|safe}}</p></div>
+             </div>
+        </div>
+    </div>
+</div>
 <!-- end blog -->
 
 

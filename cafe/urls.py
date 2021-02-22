@@ -13,7 +13,7 @@ urlpatterns = [
     path('about/',about_view,name='about'),
     path('menu/',menu_view,name='menu'),
     path('home/', TemplateView.as_view(template_name='Home/home.html', extra_context={
-        "instagram_profile_name": "foods.nepal",
+        "instagram_profile_name": "mr.foodie_nepal",
          "blog": Blog.objects.all().order_by('-id')[0:3],
          "menu": menu.objects.all().order_by('-id')[0:4],
          "active_home": home_image.objects.all()[0],
